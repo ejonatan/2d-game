@@ -7,15 +7,25 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public float jumpPower;
     public Rigidbody2D player;
-    bool facingRight = true;
+    public int health = 3;
 
-    // I took this from a Youtube tutorial because I couldn't figure out the exit/enter colliders :}
+    bool facingRight = true;
     bool onGround = false;
+
+    Animator animator = ;
 
     void Update()
     {
     	if (onGround && Input.GetButtonDown ("Vertical")) {
-    		player.AddForce(new Vector2(0, jumpPower));
+    		player.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
+    	}
+
+    	if (health <= 0) {
+    		print("player died");
+    	}
+
+    	if (onGround && Input.GetButtonDown ("FeedButton")) {
+    		Feed();
     	}
     }
 
@@ -24,6 +34,9 @@ public class PlayerController : MonoBehaviour {
         float move = Input.GetAxis ("Horizontal");
         player.velocity = new Vector2 (move * speed, player.velocity.y);
 
+        if (move != 0) {
+
+        }
 
         if( move > 0 && !facingRight ) {
         	Flip();
@@ -42,14 +55,23 @@ public class PlayerController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
-            collision.gameObject.SendMessage("ApplyDamage", 10);
+            health -= 1;
+            print(health);
         }
 
         if (collision.gameObject.tag == "Ground" && collision.gameObject.transform.position.y <= transform.position.y) {
             onGround = true;
         }
+    }
+
+    void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Ground") {
+            onGround = false;
+        }
 
     }
 
-    // I have to eventually add the E-press control to "feed" enemies...
+    void Feed() {
+    	Instantiate(Sugar)
+    }
 }
