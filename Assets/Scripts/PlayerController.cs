@@ -22,10 +22,6 @@ public class PlayerController : MonoBehaviour {
     	if ( health <= 0 ) {
     		print("player died");
     	}
-
-    	if ( onGround && Input.GetButtonDown ("FeedButton") ) {
-    		Feed();
-    	}
     }
 
     void FixedUpdate() {
@@ -65,6 +61,4 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    void Feed() {
-    }
 }

@@ -12,7 +12,7 @@ public class Feed : MonoBehaviour {
 	public List<DeathTimer> sugars = new List<DeathTimer>();
 	
 	void Update () {
-		if( Input.GetButtonDown("Jump") ) {
+		if( Input.GetButtonDown("FeedButton") ) {
 			if( sugars.Count > maxSugars ) return;
 			
 			DeathTimer newSugar = Instantiate<DeathTimer>( sugar );
