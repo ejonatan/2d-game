@@ -320,6 +320,8 @@ MonoBehaviour:
   jumpPower: 30
   player: {fileID: 185848217}
   health: 3
+  image: {fileID: 185848219}
+  animator: {fileID: 185848222}
 --- !u!95 &185848222
 Animator:
   serializedVersion: 3
