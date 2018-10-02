@@ -23,8 +23,9 @@ GameObject:
   - component: {fileID: 50726831343257284}
   - component: {fileID: 61429767198479662}
   - component: {fileID: 95550523219602014}
+  - component: {fileID: 114165108219320632}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyPeppermint
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,6 +107,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114165108219320632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1376534361427236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74ce00da45c65042a39b73f5673206d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySelf: {fileID: 4555382184761324}
+  transformedVersion: {fileID: 4860902765127708, guid: bce04f6c2e529f948b13300755c4fb4d,
+    type: 2}
 --- !u!212 &212184827301168670
 SpriteRenderer:
   m_ObjectHideFlags: 1

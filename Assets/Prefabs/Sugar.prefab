@@ -21,11 +21,10 @@ GameObject:
   - component: {fileID: 4051348033169094}
   - component: {fileID: 114652956460388448}
   - component: {fileID: 50376672221750430}
-  - component: {fileID: 114749328763857178}
   - component: {fileID: 58681164193613390}
   m_Layer: 0
   m_Name: Sugar
-  m_TagString: Untagged
+  m_TagString: Sugar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,19 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 3
   owner: {fileID: 0}
---- !u!114 &114749328763857178
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1943361021479790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5df68c4b37db2634b9522cdee2f3423a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rbody: {fileID: 50376672221750430}
-  acceleration: 0
 --- !u!212 &212172745940498844
 SpriteRenderer:
   m_ObjectHideFlags: 1

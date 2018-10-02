@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61507366736265496}
   - component: {fileID: 95601473618353292}
   m_Layer: 0
-  m_Name: Creature
+  m_Name: FriendlyPeppermint
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
